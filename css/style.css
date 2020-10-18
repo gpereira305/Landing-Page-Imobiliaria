@@ -1,0 +1,1011 @@
+/* +++++++++++++++++++++++++++++++++++++++++++++++++
+
+                                  GLOBAL SETTINGS
+
++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;1,200;1,300;1,400;1,500&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+
+/*+++++++  GLOBAL SETTINGS ++++++++++ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  
+}
+
+:root {
+    --wht_color: #ffff;
+    --prime_color: #c69963;
+    --sec_color: #101d2c;
+    --lgt_blue_color: #16273b;
+    --prime_drk: #b28451;
+    --yellow-color: #f39c12;
+    --grey_lgt: #f9f7f6;
+    --grey_lgt-2: #aaa;
+    --grey_drk: #54483a;
+    --grey_drk-2: #6d5d4b;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 10px /10px = 62.5% --> 1rem = 10px */
+}
+
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--grey_drk-2);
+    font-weight: 300;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+
+/*++++++++++++++ TYPOGRAPHY SETTING +++++++++++++++*/
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4 {
+    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.heading-1 {
+    font-size: 4.5rem;
+    color: var(--grey_lgt);
+    line-height: 1;
+
+}
+
+.heading-2 {
+    font-size: 4rem;
+    font-style: italic;
+    line-height: 1;
+}
+
+.heading-3 {
+    font-size: 1.6rem;
+    color: var(--prime_color);
+    text-transform: uppercase;
+}
+
+.heading-4 {
+    font-size: 1.9rem;
+}
+
+.heading-2.light,
+.heading-4.light {
+    color: var(--grey_lgt);
+}
+
+.heading-2.light,
+.heading-4.dark {
+    color: var(--grey_drk);
+}
+
+
+.btn {
+    background: var(--prime_color);
+    color: var(--wht_color);
+    border: none;
+    border-radius: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 2.5rem 3rem;
+    cursor: pointer;
+    transition: all ease .3s;
+    line-height: 1.5;
+    outline: none;
+}
+
+.btn:hover {
+    background: var(--prime_drk);
+}
+
+a {
+    text-decoration: none;
+    color: var(--grey_lgt);
+}
+
+.mg-bt-sm {
+    margin-bottom: 2rem;
+}
+
+.mg-bt-md {
+    margin-bottom: 3rem;
+}
+
+.mg-bt-lg {
+    margin-bottom: 4rem;
+}
+
+.mg-bt-hg {
+    margin-bottom: 8rem;
+}
+
+.fas{
+    font-size:  2rem;
+    margin: 5px;
+    color:var(--yellow-color);
+}
+
+/* +++++++++++++ CONTAINER SETTINGS ++++++++++ */
+#container {
+    display: grid;
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)[center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+
+
+
+
+/* +++++++++++++ SIDEBAR SECTION +++++++++++*/
+#sidebar {
+    background: var(--prime_color);
+    grid-column: sidebar-start/ sidebar-end;
+    /* grid-row: 1 / -1; */
+    grid-row: 1 / 8;
+    display: flex;
+    justify-content: center;
+
+}
+
+#sidebar .mobile-burger {
+    position: fixed;
+    color: var(--grey_lgt);
+    font-size: 4rem;
+    z-index: 200;
+    margin: -6px 20px;
+    cursor: pointer;
+}
+
+#sidebar .menu-icon{
+    color: #fff;
+    font-size: 3.5rem;
+
+}
+
+/* +++++++++++++ HEADER SECTION +++++++++++*/
+#header {
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    grid-template-columns: minmax(min-content, max-content);
+    justify-content: center;
+    grid-row-gap: 1.5rem;
+    padding-top: 4rem;
+    padding: 8rem;
+    grid-column: full-start / col-end 6;
+    background: linear-gradient(0deg, rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url('../images/hero.jpeg');
+}
+
+#header .header-btn {
+    align-self: start;
+    justify-self: start;
+
+}
+
+#header .header-logo {
+    height: 3rem;
+}
+
+#header .navbar {
+    position: fixed;
+    z-index: 110;
+    background: var(--prime_color);
+    width: 27%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    display: none;
+}
+
+#header .navbar ul {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+
+#header .navbar li {
+    list-style: none;
+    padding: 45px 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#header .navbar a {
+    font-size: 40px;
+    text-decoration: none;
+    color: var(--grey_lgt);
+    font-weight: 500;
+}
+
+#header .header.seenon-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center;
+    font-size: 2rem;
+    font-style: italic;
+    padding-bottom: 2rem;
+    color: var(--grey_lgt-2);
+}
+
+#header .header.seenon-text::before,
+#header .header.seenon-text::after {
+    content: "";
+    height: 1px;
+    display: block;
+    background: currentColor;
+}
+
+
+#header .header.seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3rem;
+    justify-items: center;
+    align-items: center;
+
+}
+
+#header .header.seenon-logos img {
+    filter: brightness(70%);
+    max-width: 100%;
+    max-height: 2.5rem;
+}
+
+
+/* +++++++++++++ REALTORS SECTION +++++++++++*/
+#realtors {
+    background: var(--sec_color);
+    grid-column: col-start 7 / full-end;
+    padding: 3rem;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    grid-row-gap: 2rem;
+}
+
+
+#realtors .social-media{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#realtors .social-media h2{
+padding: 10px 0;
+color: var(--prime_color);
+}
+#realtors .media-icon{
+    font-size: 3.2rem;
+    margin:  0 15px ;
+    color: var(--prime_color);
+}
+
+
+#realtors .realtors-list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5vh;
+    align-items: center;
+
+}
+
+#realtors .realtor-img {
+    width: 8rem;
+    border-radius: 50%;
+    display: block;
+}
+
+
+#realtors .realtor-seller {
+    text-transform: uppercase;
+    color: var(--grey_lgt-2);
+    margin-top: -3px;
+    letter-spacing: 1px;
+}
+
+/* +++++++++++++ FEATURES SECTION +++++++++++*/
+#features {
+    grid-column: center-start / center-end;
+    margin: 15rem 0;
+    display: grid;
+    grid-gap: 6rem;
+    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+
+#features .feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+}
+
+#features .feature-icon {
+    fill: var(--prime_color);
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem);
+}
+
+/*    */
+
+
+#features .feature-text {
+    font-size: 1.7rem;
+    margin-top: -1rem;
+}
+
+/*  --prime_color: #c69963; */
+
+
+/* +++++++++++++ SRTORY-PICTURES SECTION +++++++++++*/
+#story-pictures {
+
+    background: var(--prime_color);
+    grid-column: full-start / col-end 4;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    /* background-image: linear-gradient(rgba(var(--prime_color, .5), rgba(var(--prime_color), .5))), url('../images/gal-1.jpeg'); */
+    background-image: url("../images/back.jpg");
+}
+
+
+#story-pictures .img-1 {
+    width: 100%;
+    grid-row: 2 /6;
+    grid-column: 2 /6;
+    box-shadow: 2px 2px 10px 0.5px;
+}
+
+#story-pictures .img-2 {
+    width: 115%;
+    grid-row: 4 /6;
+    grid-column: 4 / 7;
+    z-index: 10;
+    box-shadow: 2px 2px 10px 0.5px;
+}
+
+
+
+
+
+
+
+/* +++++++++++++ STORY-CONTENT SECTION +++++++++++*/
+#story-content {
+    background: var(--grey_lgt);
+    grid-column: col-start 5 / full-end;
+    padding: 6rem 8vw;
+    display: grid;
+    align-content: center;
+    justify-items: start;
+
+}
+
+#story-content .story-text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 4rem;
+
+}
+
+
+
+
+/* +++++++++++++ HOMES SECTION +++++++++++*/
+#homes {
+    display: grid;
+    margin: 15rem 0;
+    grid-column: center-start / center-end;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 7rem;
+}
+
+#homes .home {
+    background: var(--grey_lgt);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 3.5rem;
+    text-align: center;
+}
+
+#homes .home svg {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    fill: var(--prime_color);
+}
+
+
+#homes .home .home-img {
+    width: 100%;
+    grid-column: 1 /-1;
+    grid-row: 1 / 2;
+    z-index: 1;
+}
+
+/* #homes .home .home-price {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+} */
+
+
+#homes .home .home-info {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    /* width: 2.5rem;
+    height: 2.5rem; */
+    z-index: 2;
+    justify-self: end;
+    /* margin: 1rem; */
+}
+
+
+#homes .home .home-name {
+    grid-row: 1 /2;
+    grid-column: 1 /-1;
+    z-index: 3;
+    width: 80%;
+    justify-self: center;
+    align-self: end;
+    grid-column: 1 /-1;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.25rem;
+    background: var(--sec_color);
+    color: var(--wht_color);
+    transform: translateY(50%);
+}
+
+
+/* #homes .home .home-price p {} */
+
+
+#homes .home .home-btn {
+    grid-column: 1 /-1;
+}
+
+
+#homes .home .home-location,
+#homes .home .home-rooms {
+    margin-top: 2.5rem;
+}
+
+
+
+#homes .home .home-location,
+#homes .home .home-rooms,
+#homes .home .home-area,
+#homes .home .home-price {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    align-items: center;
+    display: flex;
+}
+
+/* +++++++++++++ GALLERY SECTION +++++++++++*/
+#gallery {
+    background: var(--grey_lgt);
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 5vw);
+    grid-gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+#gallery .gallery-item.item-1 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+}
+
+#gallery .gallery-item.item-2 {
+    grid-row: 1 / span 3;
+    grid-column: 3 / span 3;
+}
+
+#gallery .gallery-item.item-3 {
+    grid-row: 1 / span 2;
+    grid-column: 6 / 7;
+}
+
+#gallery .gallery-item.item-4 {
+    grid-row: 1 / span 2;
+    grid-column: 7 / -1;
+}
+
+#gallery .gallery-item.item-5 {
+    grid-row: 3 / span 3;
+    grid-column: 1 / span 2;
+}
+
+#gallery .gallery-item.item-6 {
+    grid-row: 4 / span 2;
+    grid-column: 3 / span 2;
+}
+
+#gallery .gallery-item.item-7 {
+    grid-row: 4 / 5;
+    grid-column: 5 / 6;
+}
+
+#gallery .gallery-item.item-8 {
+    grid-row: 3 / span 2;
+    grid-column: 6 / span 2;
+}
+
+#gallery .gallery-item.item-9 {
+    grid-row: 3 / span 3;
+    grid-column: 8 / -1;
+}
+
+#gallery .gallery-item.item-10 {
+    grid-row: 6 / span 2;
+    grid-column: 1 / 2;
+}
+
+#gallery .gallery-item.item-11 {
+    grid-row: 6 / span 2;
+    grid-column: 2 / span 2;
+}
+
+#gallery .gallery-item.item-12 {
+    grid-row: 6 / span 2;
+    grid-column: 4 / 5;
+}
+
+#gallery .gallery-item.item-13 {
+    grid-row: 5 / span 3;
+    grid-column: 5 / span 3;
+}
+
+#gallery .gallery-item.item-14 {
+    grid-row: 6 / span 2;
+    grid-column: 8 / -1;
+}
+
+
+#gallery .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ++++++++   CONTACT FORM SECTION ++++++++++ */
+#contact-us-form{
+position: fixed;
+width: 100%;
+height: 100%;
+background:  rgb(0, 0 ,0, 0.85);
+z-index: 200;
+display: none;
+
+}
+
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background: var(--prime_color);
+    padding: 1% 3% 6%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(75%, 4%);
+    font-family: 'Josefin Sans', sans-serif;
+    }
+
+#contact-form .close-btn{
+position: absolute;
+color: #fff;
+font-size: 4rem;
+right: -18px;
+top: -26px;
+cursor: pointer;
+}
+    
+    #contact-form h2{
+    text-align: center;
+    padding-bottom: 10%;
+    font-size:  4rem;
+    color:var(--sec_color);
+    }
+    
+    
+    
+    #contact-form input{
+    outline: none;
+    padding: 20px 10px;
+    margin:  8px 0;
+    font-size: 2rem;
+    border:  1px solid #ccc;
+    }
+    
+    #contact-form input::placeholder{
+        color: #b8b8b8f5;
+        }
+    
+        #contact-form label{
+        padding: 20px 0;
+        text-align: center;
+        font-size: 2rem;
+        color: var(--sec_color);
+        font-weight: bold;
+    }
+    
+    #contact-form select{
+        padding: 8px 10px;
+        outline: none;
+        margin:  5px 0;
+        border:  1px solid #ccc;
+        margin-bottom:  20px;
+        font-size: 2rem;
+    }
+    
+    #contact-form textarea{
+    padding: 10px 10px 90px;;
+    width: 100%;
+    resize: none;
+    outline: none;
+    border:  1px solid #ccc;
+    font-size: 2rem;
+    }
+
+
+    #contact-form textarea::placeholder{
+        color: #ccc;
+    }
+    
+    #contact-form .checkbox{
+    padding:  10px 0;
+    
+    }
+    
+    #contact-form .form-btn {
+    padding:  20px 0;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.3rem;
+    border:  1px solid var(--sec_color);
+    background: var(--sec_color);
+    font-size: 2rem;
+    color: var(--grey_lgt);
+    transition: all  ease .3s;
+    }
+
+    #contact-form .form-btn:hover {
+background: var(--lgt_blue_color);
+    }
+
+/* +++++++++++++ FOOTER SECTION +++++++++++*/
+#footer {
+    background: var(--sec_color);
+    grid-column: full-start / full-end;
+    padding: 5rem 3rem 2rem;
+
+}
+
+#footer .nav {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1.5rem;
+    align-items: center;
+}
+
+#footer .nav .nav-link:link,
+#footer .nav .nav-link:visited {
+    font-size: 1.4rem;
+    color: var(--wht_color);
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.5rem;
+    display: block;
+    transition: all ease .3s;
+}
+
+#footer .nav .nav-link:hover,
+#footer .nav .nav-link:hover {
+    background: #102237;
+    transform: translateY(-4px);
+}
+
+#footer .copyright {
+    font-size: 1.4rem;
+    color: var(--wht_color);
+    margin-top: 2rem;
+    text-align: center;
+    /* width: 75%; */
+}
+
+
+
+
+
+
+/* ++++++++++++++++++++++++++++ 
+
+               MEDIA QUERY
+
++++++++++++++++++++++++++++++++++ */
+
+
+/*   1200px  */
+@media(max-width: 1200px) {
+    html {
+        font-size: 50%;
+    }
+
+    #header .navbar {
+        width: 30%;
+    }
+
+    #header .navbar ul {
+        left: 30%;
+    }
+
+    #header .navbar a {
+        font-size: 4rem;
+    }
+
+    #realtors .media-icon {
+        font-size: 3.2rem;
+        margin: 0 10px;
+    }
+
+    #contact-form {
+        width: 50%;
+        transform: translate(53%, 5%);
+    }
+
+}
+
+
+/*   1000px    */
+@media(max-width: 1000px) {
+    #container {
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+        grid-template-columns: [full-start] minmax(6rem, 1fr)[center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+
+    #sidebar {
+        display: unset;
+        grid-column: 1 / -1;
+        grid-row: 1 /2;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #sidebar .nav-btn {
+        left: 2%;
+        top: -10px;
+
+    }
+
+    #sidebar .nav-btn::before {
+        transform: translateY(-1.2rem);
+    }
+
+
+    #sidebar .nav-btn::after {
+        transform: translateY(1rem);
+    }
+
+
+    #sidebar::after {
+        content: '';
+        background: var(--prime_color);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 48px;
+        z-index: 100;
+        width: 100%;
+        box-shadow: 0 2px 15px rgb(0, 0, 0, 0.5);
+    }
+
+    #header .navbar {
+        width: 36%;
+    }
+
+
+#contact-form {
+    width: 60%;
+    transform: translate(33%, 9%);
+}
+
+}
+
+
+/*    800px     */
+@media(max-width: 800px) {
+
+    #container {
+        grid-template-rows: 6rem calc(100vh - 6rem);
+
+    }
+
+    #header,
+    #realtors {
+        grid-column: 1 / -1;
+    }
+
+    #header .navbar ul {
+        left: 21%;
+    }
+
+    #header .navbar li {
+        padding: 36px 0;
+    }
+
+    #header .navbar a {
+        font-size: 3.5rem;
+    }
+
+
+
+    #realtors .realtors-list {
+        grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    #story-pictures,
+    #story-content {
+        grid-column: 1 / -1;
+    }
+
+
+    #story-pictures {
+        background-size: cover;
+    }
+
+
+    #story-pictures .img-1 {
+        width: 100%;
+        grid-row: 1/ -1;
+        grid-column: 1 /5;
+    }
+
+
+    #story-pictures .img-2 {
+        width: 100%;
+        grid-row: 1/ -1;
+    }
+
+
+    #story-content {
+        grid-row: 5 /6;
+        grid-column: 1 / -1;
+    }
+
+
+}
+
+
+/*               600px                */
+@media(max-width: 600px) {
+
+    .btn {
+        justify-self: normal;
+        justify-self: center;
+    }
+
+    #header {
+        padding: 5rem;
+    }
+
+
+    #header .navbar li {
+        padding: 30px 0;
+    }
+
+    #header .navbar a {
+        font-size: 3.2rem;
+    }
+
+
+    #header .header-btn {
+        justify-self: center;
+        align-self: center;
+    }
+
+
+    #header .heading-1 {
+        text-align: center;
+    }
+
+    #header .heading-3 {
+        justify-self: center;
+    }
+
+    #realtors .realtors-list {
+        grid-template-columns: min-content max-content;
+    }
+
+    #story-content {
+        text-align: center;
+    }
+    
+    #story-content .heading-3 {
+        justify-self: normal;
+    }
+
+
+    #homes .home .home-btn {
+        justify-self: stretch;
+    }
+
+    #contact-form {
+        width: 73%;
+        transform: translate(19%, 9%);
+    }
+
+}
+
+@media (max-width: 420px){
+    #header .navbar {
+        width: 50%;
+    }
+
+
+    #header .navbar li {
+        padding: 25px 0;
+    }
+
+    #header .navbar a {
+        font-size: 3rem;
+    }
+
+
+
+    #contact-form {
+        width: 90%;
+        transform: translate(6%, 3%);
+    }
+
+    #contact-form h2 {
+        margin-top: 20px;
+        font-size: 3.5rem;
+        padding-bottom: 0;
+    }
+
+    #contact-form input {
+        outline: none;
+        padding: 15px 10px;
+        margin: 8px 0;
+    }
+
+    #contact-form label {
+        padding:  0;
+    }
+
+
+#contact-form textarea {
+    padding: 10px 10px 40px;
+}
+}
