@@ -335,12 +335,11 @@ color: var(--prime_color);
     grid-column-gap: 2.5rem;
 }
 
-#features .feature-icon {
+#features .feat-icon {
     fill: var(--prime_color);
-    width: 4.5rem;
-    height: 4.5rem;
     grid-row: 1 / span 2;
     transform: translateY(-1rem);
+    font-size: 6rem;
 }
 
 
@@ -598,7 +597,7 @@ display: none;
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(75%, 4%);
+    transform: translate(75%, 6%);
     font-family: 'Josefin Sans', sans-serif;
     }
 
@@ -606,8 +605,8 @@ display: none;
 position: absolute;
 color: #fff;
 font-size: 4rem;
-right: -18px;
-top: -26px;
+right: -14px;
+top: -18px;
 cursor: pointer;
 }
     
@@ -967,7 +966,7 @@ background: var(--lgt_blue_color);
 
     #contact-form {
         width: 90%;
-        transform: translate(6%, 3%);
+        transform: translate(6%, 10%);
     }
 
     #contact-form h2 {
