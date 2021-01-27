@@ -1,32 +1,31 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Setup](#setup)
+* [Installation](#Installation)
+* [License](#License)
 
 ## General info
-This project is simple Lorem ipsum dolor generator.
+Esse pojeto foi contruído com o  intuíto de demonstrar  uma  landing page contento as principais informações que um usuário ou clinete busca em uma página de produtos que 
+ele tem interesse. Essa landing page possui navegação rápida através do menu lateral e botões de chamada para ação dentre as seções que possibilitam  uma melhor experiência 
+para o usuário. 
+É totalmente responsivo para qualquer plataforma sem perda de performance e usabilidade.
 	
 ## Technologies
-Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+Esse projeto usa as seguintes tecnologias:
+* HTML 5
+* CSS 3 
+* JQuery
 	
-## Setup
-To run this project, install it locally using npm:
+## Installation
+Faça um clone desse repo e abra o arquivo HTML no navegador ou caso queira apenas ver o projeto online, acesse nesse link:  https://gpereira305.github.io/nexter-imobiliaria
+ 
 
-```
-$ cd ../lorem
-$ npm install
-$ npm start
-```
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
 
 
 
 
-Essa é uma landing page contendo informações sobre imóveis de luxo.
-Essa landing page foi contruída com HTML e utilizando do Grid Layout do CSS. Possui menu lateral, navegação por seções e um modal de contato.
-É totalmente responsivo e de fácil navegação.
 
-Visite online ====>   https://gpereira305.github.io/nexter-imobiliaria
+
