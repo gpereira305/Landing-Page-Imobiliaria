@@ -20,6 +20,10 @@ Esse projeto usa as seguintes tecnologias:
 Faça um clone desse repo e abra o arquivo HTML no navegador ou caso queira apenas ver o projeto online, acesse nesse link:  https://gpereira305.github.io/Landing-Page-Imobiliaria/
  
 
+## Demo
+![imobiliária](https://user-images.githubusercontent.com/66249777/106132231-72ff4580-6142-11eb-9b4f-b4cad9f50f0a.gif)
+
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
