@@ -17,7 +17,7 @@ Esse projeto usa as seguintes tecnologias:
 * JQuery
 	
 ## Installation
-Faça um clone desse repo e abra o arquivo HTML no navegador ou caso queira apenas ver o projeto online, acesse nesse link:  https://gpereira305.github.io/nexter-imobiliaria
+Faça um clone desse repo e abra o arquivo HTML no navegador ou caso queira apenas ver o projeto online, acesse nesse link:  https://gpereira305.github.io/Landing-Page-Imobiliaria/
  
 
 ## License
